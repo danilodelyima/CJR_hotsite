@@ -12,5 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require semantic/dist/semantic
+//= require assets/js/skel.min
+//= require assets/js/util
+//= require assets/js/main
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+
+  $('.new-candidate-button').on('click', function() {
+
+    $('.new-candidate-modal').modal({
+      closable: false
+    }).modal('show');
+
+  });
+
+});

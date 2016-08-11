@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @candidate.name
+p
+  strong Email:
+  = @candidate.email
+p
+  strong Cell phone:
+  = @candidate.cell_phone
+p
+  strong Course:
+  = @candidate.course
+p
+  strong Semester:
+  = @candidate.semester
+
+= link_to 'Edit', edit_candidate_path(@candidate)
+'|
+= link_to 'Back', candidates_path

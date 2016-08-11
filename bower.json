@@ -1,0 +1,21 @@
+{
+  "name": "ps-landing",
+  "homepage": "https://github.com/danilodelyima/CJR_hotsite",
+  "authors": [
+    "Rafael Fernandes <rafaelalves@cjr.org.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.2"
+  }
+}

@@ -1,0 +1,147 @@
+/! Header
+header#header.alt
+  
+  h1
+    strong
+      a href="index.html" Processo Seletivo 
+    | da CJR
+  
+  nav#nav
+    ul
+      li
+        a href="index.html" Sobre
+      li
+        a href="generic.html" FAQ
+      li
+        a href="elements.html" Inscrição
+
+a.navPanelToggle href="#menu" 
+  span.fa.fa-bars
+
+/! Banner
+section#banner
+  h2 TÁ SAINDO DA JAULA O PS
+  p
+    | PERÍODO DE INSCRIÇÃO
+    br/
+    | por**
+  ul.actions
+    li
+      a.button.special.big href="#" INSCREVA-SE
+
+section#one.wrapper.style1
+  .container class="75%" 
+    .row class="200%" 
+      .6u class="12u$(medium)" 
+        header.major
+          h2 EMPRESA JÚNIOR DE COMPUTAÇÃO
+          p Sobre a CJR
+      div class=("6u$ 12u$(medium)") 
+        p A CJR é a Empresa Júnior dos cursos de Ciência da Computação e Computação Licenciatura da Universidade de Brasília. Temos como propósito transformar a sociedade a partir da tecnologia da informação, promovendo aos nossos membros um ambiente propício para o desenvolvimento de habilidades técnicas e pessoais por meio de experiências empreendedoras.
+
+section#two.wrapper.style2.special
+  .container
+    .row class="150%" 
+      .4u class="12u$(xsmall)" 
+        .image.fit.captioned
+          h3 COLOBORATIVISMO
+      .4u class="12u$(xsmall)" 
+        .image.fit.captioned
+          h3 PROATIVIDADE
+      div class=("4u$ 12u$(xsmall)") 
+        .image.fit.captioned
+          h3 IMPACTO
+
+section#three.wrapper.style1
+  .container
+    header.major.special
+      h2 FAQ E DATAS
+      p FRAZE SUEIRA
+
+    .feature-grid
+      .feature
+        .content
+          header
+            h4 O que é uma empresa júnior?
+          p É uma associação civil, sem fins lucrativos, formada por alunos de nível superior.
+      .feature
+        .content
+          header
+            h4 O que a CJR faz?
+          p Construímos soluções em Tecnologia da Informação para que nossos clientes tenham tempo para o que realmente importa.
+      .feature
+        .content
+          header
+            h4 Quem pode participar?
+          p Estudantes dos cursos de Ciência da Computação e Computação (Licenciatura) da Universidade de Brasília em qualquer semestre.
+      .feature
+        .content
+          header
+            h4 Me inscrevi. E agora?
+          p Você receberá a confirmação da inscrição no seu email. Aguarde os eventos seguintes para continuar o Processo.
+    
+    .ui.divider[style='padding-bottom: 2em']
+    
+    .feature-grid
+      .feature
+        .content
+          header
+            h4 Inscrições
+          p Vitae earum unde, autem labore voluptas ex
+      .feature
+        .content
+          header
+            h4 Palestra Motivacional
+          p 01 de setembro
+      .feature
+        .content
+          header
+            h4 Dinâmicas
+          p 06 de setembro
+      .feature
+        .content
+          header
+            h4 Entrevistas
+          p Vitae earum unde, autem labore voluptas ex
+
+/! Four
+section#four.wrapper.style3.special
+  .container
+    header.major
+      h2 Aenean elementum ligula
+      p Feugiat sed lorem ipsum magna
+    ul.actions
+      li
+        a.button.special.big.new-candidate-button INSCREVA-SE
+
+/! Footer
+footer#footer
+  .container
+    ul.icons
+      li
+        a.icon.fa-facebook href="#" 
+      li
+        a.icon.fa-twitter href="#" 
+      li
+        a.icon.fa-instagram href="#" 
+    ul.copyright
+      li © Untitled
+      li
+        | Design:
+        a href="http://templated.co"  TEMPLATED
+      li
+        | Images:
+        a href="http://unsplash.com"  Unsplash
+
+.new-candidate-modal.ui.modal
+
+  .header
+    | Inscrição
+
+  .content
+    form.ui.form#new-candidate-form[action='/candidates' method='post' data-remote='true']
+
+
+  .actions
+    input.ui.cancel.button[type='reset' value='Cancelar']
+    input.ui.green.button[type='submit' form='new-candidate-form' value='Inscrever-se']

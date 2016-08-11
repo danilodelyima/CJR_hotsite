@@ -1,0 +1,34 @@
+.ui.container[style='padding-top: 2em']
+
+  h1 Candidatos
+
+  .ui.divider
+
+  = candidates_table(@candidates)
+
+    thead
+      tr
+        th Nome
+        th Email
+        th Telefone
+        th Curso
+        th Semestre
+        th
+        th
+        th
+
+    tbody
+
+      - @candidates.each do |candidate|
+    
+        tr
+          td = candidate.name
+          td = candidate.email
+          td = candidate.cell_phone
+          td = candidate.course
+          td = candidate.semester
+          td = link_to 'Show', candidate
+          td = link_to 'Edit', edit_candidate_path(candidate)
+          td = link_to 'Destroy', candidate, data: { confirm: 'Are you sure?' }, method: :delete
+
+  = candidates_empty(@candidates)

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "semantic/dist/semantic";
+@import "assets/css/main";
+
+#banner {
+  background-image: url('slide.jpg');
+  background-size: cover;
+}
+
+.wrapper.style3 {
+  background-image: url('slide.jpg');
+  background-size: cover;
+}
