@@ -3,28 +3,28 @@ header#header.alt
   
   h1
     strong
-      a href="index.html" Processo Seletivo 
+      a Processo Seletivo 
     | da CJR
   
   nav#nav
     ul
       li
-        a href="index.html" Sobre
+        a[onclick="$('#one').animatescroll();" style="cursor: pointer"] Sobre
       li
-        a href="generic.html" FAQ
+        a[onclick="$('#three').animatescroll();" style="cursor: pointer"] FAQ e DATAS
       li
-        a href="elements.html" Inscrição
+        a[onclick="$('#four').animatescroll();" style="cursor: pointer"] Inscrição
 
 a.navPanelToggle href="#menu" 
   span.fa.fa-bars
 
 /! Banner
 section#banner
-  h2 TÁ SAINDO DA JAULA O PS
+  h2 PROCESSO SELETIVO DA CJR
   p
-    | PERÍODO DE INSCRIÇÃO
+    | 2º/2016 
     br/
-    | por**
+    | INSCRIÇÕES: DE XX/XX A YY/YY
   ul.actions
     li
       a.button.special.big href="#" INSCREVA-SE
@@ -41,22 +41,39 @@ section#one.wrapper.style1
 
 section#two.wrapper.style2.special
   .container
+    header.major
+      h2 NOSSOS DIFERENCIAIS
     .row class="150%" 
       .4u class="12u$(xsmall)" 
         .image.fit.captioned
-          h3 COLOBORATIVISMO
+          h3
+            | COLABORATIVISMO
+            br
+            br
+            span[style='font-weight: 100; text-transform: none']
+              | Porque sozinhos vamos mais rápidos, mas juntos vamos mais longe.
       .4u class="12u$(xsmall)" 
         .image.fit.captioned
-          h3 PROATIVIDADE
+          h3
+            | PROATIVIDADE
+            br
+            br
+            span[style='font-weight: 100; text-transform: none']
+              | Porque queremos pessoas com vontade de fazer.
       div class=("4u$ 12u$(xsmall)") 
         .image.fit.captioned
-          h3 IMPACTO
+          h3
+            | IMPACTO
+            br
+            br
+            span[style='font-weight: 100; text-transform: none']
+              | Porque fazemos a diferença.
 
 section#three.wrapper.style1
   .container
     header.major.special
       h2 FAQ E DATAS
-      p FRAZE SUEIRA
+      p Não perca nenhum prazo
 
     .feature-grid
       .feature
@@ -68,7 +85,7 @@ section#three.wrapper.style1
         .content
           header
             h4 O que a CJR faz?
-          p Construímos soluções em Tecnologia da Informação para que nossos clientes tenham tempo para o que realmente importa.
+          p Construímos soluções em Tecnologia da Informação, como sites, sistemas e aplicações WEB, para que nossos clientes tenham tempo para o que realmente importa.
       .feature
         .content
           header
@@ -87,29 +104,29 @@ section#three.wrapper.style1
         .content
           header
             h4 Inscrições
-          p Vitae earum unde, autem labore voluptas ex
+          p de XX de agosto a XX de setembro
       .feature
         .content
           header
             h4 Palestra Motivacional
-          p 01 de setembro
+          p 01 de setembro, local: auditório do prédio CiC/EST, horário: xx
       .feature
         .content
           header
             h4 Dinâmicas
-          p 06 de setembro
+          p 06 de setembro, local: xx, horário: xx
       .feature
         .content
           header
             h4 Entrevistas
-          p Vitae earum unde, autem labore voluptas ex
+          p xx de setembro, local: sede da CJR
 
 /! Four
 section#four.wrapper.style3.special
   .container
     header.major
-      h2 Aenean elementum ligula
-      p Feugiat sed lorem ipsum magna
+      h2 O QUE ESTÁ ESPERANDO?
+      p Inscreva-se já e faça parte dessa história!
     ul.actions
       li
         a.button.special.big.new-candidate-button INSCREVA-SE
@@ -118,30 +135,74 @@ section#four.wrapper.style3.special
 footer#footer
   .container
     ul.icons
+      li 
+        | Curta nossa página no Facebook: 
       li
-        a.icon.fa-facebook href="#" 
-      li
-        a.icon.fa-twitter href="#" 
-      li
-        a.icon.fa-instagram href="#" 
+        a[href="https://www.facebook.com/unb.cjr/" target="_blank" style='color: #9a9aff'] facebook.com/unb.cjr
     ul.copyright
-      li © Untitled
+      li Empresa Júnior de Computação - CJR
       li
-        | Design:
-        a href="http://templated.co"  TEMPLATED
-      li
-        | Images:
-        a href="http://unsplash.com"  Unsplash
+        | Sede: UnB - Campus Darcy Ribeiro, Prédio CiC/EST, Sala AT 12/11
 
 .new-candidate-modal.ui.modal
 
-  .header
-    | Inscrição
+  .content[style='padding-bottom: 0']
 
-  .content
     form.ui.form#new-candidate-form[action='/candidates' method='post' data-remote='true']
 
+      .three.fields
+
+        .field
+          label Nome
+          input[type='text' name='candidate[name]']
+
+        .field
+          label Email
+          input[type='email' name='candidate[email]']
+
+        .field
+          label Telefone
+          input#cell_phone[type='text' name='candidate[cell_phone]']
+
+      .two.fields
+
+        .field
+          label Curso
+          select.ui.dropdown[name='candidate[course]']
+            option[value=""] Selecione seu curso
+            option[value="Ciência da Computação"] Ciência da Computação
+            option[value="Computação (Licenciatura)"] Computação (Licenciatura)
+
+        .field
+          label Semestre
+          select.ui.dropdown[name='candidate[semester]']
+            option[value=""] Selecione seu semestre
+            option[value="1"] 1º
+            option[value="2"] 2º
+            option[value="3"] 3º
+            option[value="4"] 4º
+            option[value="5"] 5º
+            option[value="6"] 6º
+            option[value="7"] 7º
+            option[value="8"] 8º
+            option[value="9"] 9º
+            option[value="10"] 10º
+            option[value="11"] 11º
+            option[value="12"] 12º
+            option[value="13"] 13º
+            option[value="14"] 14º
+
+      .ui.mini.error.message
 
   .actions
     input.ui.cancel.button[type='reset' value='Cancelar']
     input.ui.green.button[type='submit' form='new-candidate-form' value='Inscrever-se']
+
+.ui.page.dimmer#candidate_created_alert
+  .content
+    .center
+      h2.ui.inverted.icon.header
+        i.checkmark.green.icon
+        | Inscrição realizada com sucesso!
+      br
+      | Participante, você receberá uma confirmação no seu email, fique de olho!

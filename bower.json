@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "semantic": "semantic-ui#^2.2.2"
+    "semantic": "semantic-ui#^2.2.2",
+    "animatescroll": "^1.0.7"
   }
 }

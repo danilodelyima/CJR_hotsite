@@ -2098,7 +2098,7 @@
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 0 1em;
+		/*padding: 0 1em;*/
 		text-decoration: none;
 		width: 100%;
 	}
@@ -2154,13 +2154,13 @@
 			display: none;
 		}
 
-	input[type="text"],
+/*	input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select {
 		height: 2.75em;
 	}
-
+*/
 	textarea {
 		padding: 0.75em 1em;
 	}

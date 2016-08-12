@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:create]
   before_action :set_candidate, only: [:show, :edit, :update, :destroy]
 
   # GET /candidates
@@ -12,6 +12,20 @@ class CandidatesController < ApplicationController
   # GET /candidates/1
   # GET /candidates/1.json
   def show
+  end
+
+  # POST /candidates
+  # POST /candidates.json
+  def create
+    @candidate = Candidate.new(candidate_params)
+
+    respond_to do |format|
+      if @candidate.save
+        format.js { render 'candidate_created' }
+      else
+        format.js { render 'candidate_not_created' }
+      end
+    end
   end
 
   # GET /candidates/1/edit
