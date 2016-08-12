@@ -1,21 +1,23 @@
-p#notice = notice
+div[style="padding-top: 10em"]
 
-p
-  strong Name:
-  = @candidate.name
-p
-  strong Email:
-  = @candidate.email
-p
-  strong Cell phone:
-  = @candidate.cell_phone
-p
-  strong Course:
-  = @candidate.course
-p
-  strong Semester:
-  = @candidate.semester
+  .ui.segment[style="margin: 0 auto; max-width: 600px"]
 
-= link_to 'Edit', edit_candidate_path(@candidate)
-'|
-= link_to 'Back', candidates_path
+    p
+      strong Nome: 
+      = @candidate.name
+    p
+      strong Email: 
+      = @candidate.email
+    p
+      strong Telefone: 
+      = @candidate.cell_phone
+    p
+      strong Curso: 
+      = @candidate.course
+    p
+      strong Semestre: 
+      = @candidate.semester
+
+    = link_to 'Editar ', edit_candidate_path(@candidate)
+    '|
+    = link_to 'Voltar', candidates_path

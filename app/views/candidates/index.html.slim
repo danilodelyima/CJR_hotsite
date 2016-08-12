@@ -1,6 +1,12 @@
 .ui.container[style='padding-top: 2em']
-
-  h1 Candidatos
+  
+  .ui.grid
+    .ten.wide.column
+      strong
+        | Candidatos: 
+        = @candidates.size
+    .six.wide.right.aligned.column
+      = link_to 'Sair', destroy_user_session_path, method: :delete
 
   .ui.divider
 
@@ -27,8 +33,8 @@
           td = candidate.cell_phone
           td = candidate.course
           td = candidate.semester
-          td = link_to 'Show', candidate
-          td = link_to 'Edit', edit_candidate_path(candidate)
-          td = link_to 'Destroy', candidate, data: { confirm: 'Are you sure?' }, method: :delete
+          td = link_to 'Exibir', candidate
+          td = link_to 'Editar', edit_candidate_path(candidate)
+          td = link_to 'Excluir', candidate, data: { confirm: 'Você tem certeza?' }, method: :delete
 
   = candidates_empty(@candidates)

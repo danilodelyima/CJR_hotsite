@@ -1,24 +1,37 @@
-= form_for @candidate do |f|
+= form_for @candidate, html: { class: 'ui form' } do |f|
+
   - if @candidate.errors.any?
+
     #error_explanation
-      h2 = "#{pluralize(@candidate.errors.count, "error")} prohibited this candidate from being saved:"
+      h4 = "#{pluralize(@candidate.errors.count, "error")} prohibited this candidate from being saved:"
       ul
         - @candidate.errors.full_messages.each do |message|
           li = message
 
+  .two.fields
+
+    .field
+      label Nome
+      = f.text_field :name
+
+    .field
+      label Email
+      = f.email_field :email
+
   .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :cell_phone
-    = f.text_field :cell_phone
-  .field
-    = f.label :course
-    = f.text_field :course
-  .field
-    = f.label :semester
-    = f.number_field :semester
-  .actions = f.submit
+    label Telefone
+    = f.text_field :cell_phone, class: 'cell_phone'
+
+  .two.fields
+
+    .field
+      label Curso
+      = f.select :course, [["Ciência da Computação", "Ciência da Computação"], ["Computação (Licenciatura)", "Computação (Licenciatura)"]], { include_blank: 'Selecione o curso' }, { class: 'ui dropdown' }
+
+    .field
+      label Semestre
+      = f.select :semester, [["1º", "1"], ["2º", "2"], ["3º", "3"], ["4º", "4"], ["5º", "5"], ["6º", "6"], ["7º", "7"], ["8º", "8"], ["9º", "9"], ["10º", "10"], ["11º", "11"], ["12º", "12"], ["13º", "13"], ["14º", "14"]], { include_blank: 'Selecione o semestre' }, { class: 'ui dropdown' }
+
+  .ui.mini.error.message
+
+  = f.submit 'Atualizar', class: 'ui fluid green button'
