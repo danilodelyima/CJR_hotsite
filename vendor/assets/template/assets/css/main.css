@@ -1941,7 +1941,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #f32853;
+			background-color: #86c73a;
 			color: #ffffff !important;
 		}
 
@@ -1950,7 +1950,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #f44066;
+				background-color: #8cc24e;
 			}
 
 			input[type="submit"].special:active,
@@ -1958,7 +1958,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #f21040;
+				background-color: #8cc24e;
 			}
 
 		@media screen and (max-width: 480px) {
