@@ -71,6 +71,9 @@ $(document).ready ->
           prompt: 'Por favor, selecione seu semestre'
         ]
 
+    on: 'blur'
+    inline: true
+
     onSuccess: ->
       $(this).addClass 'loading'
       return

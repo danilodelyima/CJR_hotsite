@@ -151,11 +151,11 @@ footer#footer
 
     form.ui.form#new-candidate-form[action='/candidates' method='post' data-remote='true']
 
-      .three.fields
+      .field
+        label Nome
+        input[type='text' name='candidate[name]']
 
-        .field
-          label Nome
-          input[type='text' name='candidate[name]']
+      .two.fields
 
         .field
           label Email
